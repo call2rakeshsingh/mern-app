@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 7000
 const app = express()
 
 
-const allowedOrigins = ['https://internalmern.netlify.app'];
+const allowedOrigins = ['http://internalmern.netlify.app'];
 
 app.use(cors({
     origin: function(origin, callback) {
