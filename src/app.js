@@ -8,17 +8,8 @@ const cors = require('cors');
 const PORT = process.env.PORT || 7000
 const app = express()
 
-
-const allowedOrigins = ['http://internalmern.netlify.app'];
-
 app.use(cors({
-    origin: function(origin, callback) {
-        if (allowedOrigins.indexOf(origin) === -1) {
-            const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-            return callback(new Error(msg), false);
-        }
-        return callback(null, true);
-    },
+    origin: "http://internalmern.netlify.app",
     credentials: true,
 }));
 
