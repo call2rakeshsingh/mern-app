@@ -15,6 +15,8 @@ const addEmailInHelpticket = require('../middleware/addemailinhelpticket')
 
 router.post('/login', async (req, res) => {
 
+    console.log("some one try to login")
+
     const {email, password} = req.body
 
     try {
@@ -24,7 +26,7 @@ router.post('/login', async (req, res) => {
       const isMatch = await bcryptjs.compare(password,userData.password)
 
       if(!isMatch){
-        return res.status(404).send("user is not valid")
+        return res.status(401).send("user is not valid")
         }
 
     const token = await userData.generateAuthToken(userData._id);
