@@ -27,12 +27,6 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(require("../router/auth"))
 
-
-
-
-
-
-
 app.listen(PORT, () => {
     console.log(`Server is listening at ${PORT}`)
 })
