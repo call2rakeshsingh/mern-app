@@ -18,7 +18,7 @@ const empRegDataSchema = mongoose.Schema({
         type:Number,
         unique : true,
         min: 4000000000,
-        max: 9000000000,
+        max: 10000000000,
         required: true
     },
     email:{
